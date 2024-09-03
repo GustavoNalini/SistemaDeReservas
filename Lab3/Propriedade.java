@@ -1,12 +1,10 @@
 abstract class Propriedade {
-  // Atributos da classe
   private String titulo;
   private String descricao;
   private String localidade;
   private double precoNoite;
   private boolean disponivel;
 
-  // Construtor
   public Propriedade(String titulo, String descricao, String localidade, double precoNoite, boolean disponivel) {
       this.titulo = titulo;
       this.descricao = descricao;
@@ -15,7 +13,6 @@ abstract class Propriedade {
       this.disponivel = disponivel;
   }
 
-  // Métodos getters
   public String getTitulo() {
       return titulo;
   }
@@ -36,6 +33,5 @@ abstract class Propriedade {
       return disponivel;
   }
 
-  // Método abstrato
   public abstract void mostrarDetalhes();
 }

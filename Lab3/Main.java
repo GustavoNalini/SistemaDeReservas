@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         List<Propriedade> propriedadesCadastradas = new ArrayList<>();
 
-        // Adicionando propriedades pré-cadastradas
         propriedadesCadastradas.add(new Casa("Casa na Praia", "Uma bela casa com vista para o mar.", "Praia Grande", 300.00, true, 3, 50.00));
         propriedadesCadastradas.add(new Apartamento("Apartamento no Centro", "Apto confortável no coração da cidade.", "Centro", 150.00, true, 5));
         propriedadesCadastradas.add(new Casa("Chalé na Montanha", "Chalé aconchegante nas montanhas.", "Serra Negra", 200.00, true, 2, 30.00));
@@ -18,10 +17,9 @@ public class Main {
         System.out.println("1. Proprietário");
         System.out.println("2. Cliente");
         int escolha = scanner.nextInt();
-        scanner.nextLine();  // Consumir a nova linha
+        scanner.nextLine();  
 
         if (escolha == 1) {
-            // Proprietário
             System.out.print("Digite o nome do proprietário: ");
             String nomeProprietario = scanner.nextLine();
             System.out.print("Digite a senha do proprietário: ");
@@ -36,7 +34,7 @@ public class Main {
                 System.out.println("2. Mostrar Propriedades Cadastradas");
                 System.out.println("3. Sair");
                 int opcao = scanner.nextInt();
-                scanner.nextLine();  // Consumir a nova linha
+                scanner.nextLine(); 
 
                 if (opcao == 1) {
                     System.out.print("Digite o título da propriedade: ");
@@ -47,28 +45,28 @@ public class Main {
                     String localidade = scanner.nextLine();
                     System.out.print("Digite o preço por noite: ");
                     double precoNoite = scanner.nextDouble();
-                    scanner.nextLine();  // Consumir a nova linha
+                    scanner.nextLine(); 
 
                     System.out.println("Tipo de Propriedade:");
                     System.out.println("1. Casa");
                     System.out.println("2. Apartamento");
                     int tipoPropriedade = scanner.nextInt();
-                    scanner.nextLine();  // Consumir a nova linha
+                    scanner.nextLine(); 
 
                     Propriedade novaPropriedade;
                     if (tipoPropriedade == 1) {
                         System.out.print("Digite o número de quartos: ");
                         int numeroQuartos = scanner.nextInt();
-                        scanner.nextLine();  // Consumir a nova linha
+                        scanner.nextLine(); 
                         System.out.print("Digite a taxa de limpeza: ");
                         double taxaLimpeza = scanner.nextDouble();
-                        scanner.nextLine();  // Consumir a nova linha
+                        scanner.nextLine(); 
 
                         novaPropriedade = new Casa(titulo, descricao, localidade, precoNoite, true, numeroQuartos, taxaLimpeza);
                     } else {
                         System.out.print("Digite o andar: ");
                         int andar = scanner.nextInt();
-                        scanner.nextLine();  // Consumir a nova linha
+                        scanner.nextLine(); 
                         novaPropriedade = new Apartamento(titulo, descricao, localidade, precoNoite, true, andar);
                     }
 
@@ -101,7 +99,7 @@ public class Main {
                 System.out.println("3. Ver Propriedades Cadastradas");
                 System.out.println("4. Sair");
                 int opcao = scanner.nextInt();
-                scanner.nextLine();  // Consumir a nova linha
+                scanner.nextLine(); 
 
                 if (opcao == 1) {
                     if (propriedadesCadastradas.isEmpty()) {
@@ -112,7 +110,7 @@ public class Main {
                             System.out.println((i + 1) + ". " + propriedadesCadastradas.get(i).getTitulo());
                         }
                         int escolhaPropriedade = scanner.nextInt();
-                        scanner.nextLine();  // Consumir a nova linha
+                        scanner.nextLine(); 
 
                         if (escolhaPropriedade > 0 && escolhaPropriedade <= propriedadesCadastradas.size()) {
                             Propriedade propriedadeEscolhida = propriedadesCadastradas.get(escolhaPropriedade - 1);

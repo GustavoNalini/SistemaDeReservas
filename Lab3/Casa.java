@@ -1,12 +1,12 @@
 class Casa extends Propriedade {
   private int numeroQuartos;
-  private double taxaLimpeza;  // Novo atributo
+  private double taxaLimpeza; 
 
   public Casa(String titulo, String descricao, String localidade, double precoNoite, boolean disponivel, int numeroQuartos, double taxaLimpeza) {
       super(titulo, descricao, localidade, precoNoite, disponivel);
       this.numeroQuartos = numeroQuartos;
-      this.taxaLimpeza = taxaLimpeza;  // Inicializa a taxa de limpeza
-  }
+      this.taxaLimpeza = taxaLimpeza;  
+     }
 
   public double getTaxaLimpeza() {
       return taxaLimpeza;
